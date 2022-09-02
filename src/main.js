@@ -40,14 +40,17 @@ buton.addEventListener('click', ()=>{ //primero limpiamos pantalla
 
 const sectionAthletes = document.getElementById('sectionAthletes')
 const personas= data.athletes.length
-const filtrarporGenero =(usergender)=>{
+
+const filtrarporGenero =(gender)=>{
 const contargenero = data.athletes.filter(athlete=>{
-	return athlete.gender === usergender
+	return athlete.gender === gender
 })
-console.log(filtrarporGenero("F"))
+
 return contargenero
 }
-console.log(filtrarporGenero('F').length)
+console.log(personas)
+console.log(filtrarporGenero('🙋🏻‍♂️').length)
+console.log(filtrarporGenero('🙋🏻‍♀️').length)
 let acumuladorHTML = ''
 
 /*contargenero.forEach(genero => {
